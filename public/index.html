@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>WebSocket Example</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>Websocket Demo</h1>
+<p>
+    <label for="status">Status: </label>
+    <input type="text" id="status"
+           name="status" value="Disconnected"
+           readonly="readonly" style="width: 300px;"
+    />
+</p>
+
+<p>
+    <label for="message">Message: </label>
+    <input type="text" id="message" name="message" style="width: 300px;"/>
+    <button id="sendMsg" onclick="sendMsg()">
+        Send
+    </button>
+</p>
+
+<p>
+    <button id="connect" onclick="connect()">
+        Connect
+    </button>
+    <button id="disconnect" onclick="disconnect()" disabled>
+        Disconnect
+    </button>
+</p>
+
+<script src="./jquery-1.10.2.min.js"></script>
+<script src="./socket.io.js"></script>
+<script src="./main.js"></script>
+</body>
+</html>
